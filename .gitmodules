@@ -18,3 +18,8 @@
     url = git@github.com:ros-perception/vision_opencv.git
     branch = indigo
 
+[submodule "velodyne"]
+    path = src/velodyne
+    url = git@github.com:ros-drivers/velodyne.git
+    branch = master
+
