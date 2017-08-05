@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<launch>
+  <rosparam command="load" file="$(find coloring_launch)/cfg/calibration.yaml" />
+  <rosparam command="load" file="$(find coloring_launch)/cfg/coloring.yaml" />
+  <node pkg="but_calibration_camera_velodyne" type="coloring" name="coloring" output="screen">
+  </node>
+
+  <node pkg="libuvc_camera" type="camera_node" name="camera" output="screen">
+    <param name="timestamp_method" value="stop"/>
+  </node>
+  
+  <node pkg="coloring" type="camera_timestamp" name="camera_timestamp" output="screen" />
+
+  <include file="$(find velodyne_pointcloud)/launch/32e_points.launch" />
+
+  <node pkg="rviz" type="rviz" name="rviz" args=""/>
+</launch>
+

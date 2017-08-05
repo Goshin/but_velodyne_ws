@@ -1,0 +1,20 @@
+[submodule "opencv"]
+    path = src/opencv
+    url = git@github.com:opencv/opencv.git
+    branch = 2.4
+
+[submodule "but_velodyne_lib"]
+    path = src/but_velodyne_lib
+    url = git@github.com:Goshin/but_velodyne_ws.git
+    branch = but_velodyne_lib_fork
+
+[submodule "but_velodyne"]
+    path = src/but_velodyne
+    url = git@github.com:Goshin/but_velodyne_ws.git
+    branch = but_velodyne_fork
+
+[submodule "vision_opencv"]
+    path = src/vision_opencv
+    url = git@github.com:ros-perception/vision_opencv.git
+    branch = indigo
+
